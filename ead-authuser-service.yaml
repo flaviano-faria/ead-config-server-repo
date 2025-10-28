@@ -27,10 +27,22 @@ ead:
   broker:
     exchange:
       userEvent: ead.userevent
+
+authuser:
+  refreshscope:
+    name: Flaviano
+
     queue:
       userEventQueue:
         name: ead.userevent.ms.course
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - refresh
+          - health
 
 logging:
   level:
